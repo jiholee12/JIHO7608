@@ -1,19 +1,7 @@
-function flushOperation(intBuffer){
-    if(previousOperator === '+'){
-        runninTotal += intBuffer;
-    }else if(previousOperator === '-'){
-        runninTotal -= intBuffer;
-    }else if(previousOperator === '*'){
-        runninTotal *= intBuffer
-    }else if(previousOperator === '/'){
-        runninTotal /= intBuffer;
-    }
+function init(){
+    document.querySelector(' .calc-buttons').addEventListener('click',function(event){
+        buttonClick(event.target.innerText);
+    })
 }
 
-function handleNumber(numberString){
-    if(buffer === '0'){
-        buffer = numberString;
-    }else{
-        buffer += numberString;
-    }
-}
+init();
